@@ -1,7 +1,7 @@
 using Performance
 using Test
 
-ntests_finished = 5   # increment this counter to run the next set of tests
+ntests_finished = 1   # increment this counter to run the next set of tests
 
 @testset "Performance.jl" begin
     ntests = ntests_finished
