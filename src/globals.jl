@@ -2,7 +2,8 @@ export getchar, set_homedir, get_homedir
 
 charset = 'a':'z'
 
-getchar(idx) = charset[idx]::Char
+getchar(idx::Int64) = charset[idx]::Char
+
 
 homedir = "wrong"
 
