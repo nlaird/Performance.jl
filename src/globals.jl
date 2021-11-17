@@ -7,7 +7,7 @@ getchar(idx::Int64) = charset[idx]::Char
 homedir = "wrong"
 
 function set_homedir(path)
-    global homedir = Ref(path)
+    global homedir = path
 end
-get_homedir() = homedir
+get_homedir() = Ref{String}(homedir)[]
 
