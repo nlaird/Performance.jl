@@ -64,5 +64,19 @@ function calculate_branch(numbers::AbstractVector{<:Real}, operations::AbstractS
     # iterate through the characters in `operations` (which will all be one of `+`, `-`, `*`, `/`)
     # Do not create an Operator from the character, instead just use a set of `if...elseif...end`
     # conditionals.
-    error("you have to implement this function")
+    a = Float64(numbers[1])
+    for i = 1:length(operations)
+        b = numbers[i+1]
+        op = operations[i]
+        if op == '+'
+            a = a + b
+        elseif op == '-'
+            a = a - b
+        elseif op == '*'
+            a = a * b
+        elseif op == '/'
+            a = a / b
+        end
+    end
+    return a
 end
